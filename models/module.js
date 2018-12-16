@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const BabysatterSchema = new Schema({
+const ModuleSchema = new Schema({
   firstname: String,
   lastname: String,
   city: String,
@@ -10,4 +10,4 @@ const BabysatterSchema = new Schema({
   satscore: String
 });
 
-module.exports = mongoose.model('Babysatter', BabysatterSchema);
+module.exports = mongoose.model('Module', ModuleSchema);

@@ -1,12 +1,12 @@
-<a href="/babysatters">Back to Babysitters List</a>
+<a href="/modules">Back to Modules List</a>
 
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
-<h1>{{babysatter.firstname}}</h1>
-<h1>{{babysatter.lastname}}</h1>
-    <p><a href="/babysatters/{{babysatter._id}}/edit">Edit</a></p>
+<h1>{{module.firstname}}</h1>
+<h1>{{module.lastname}}</h1>
+    <p><a href="/modules/{{module._id}}/edit">Edit</a></p>
     <p>
-        <form method="POST" action="/babysatters/{{babysatter._id}}?_method=DELETE">
+        <form method="POST" action="/modules/{{module._id}}?_method=DELETE">
             <button class="btn btn-primary" type="submit">Delete</button>
         </form>
     </p>

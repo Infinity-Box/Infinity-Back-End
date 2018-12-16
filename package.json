@@ -1,7 +1,7 @@
 {
   "name": "babysat",
   "version": "1.0.0",
-  "description": "We have been given a contract from xyz university to build an app that allows parents to find babysitters that will help prepare their toddlers for their future SATs. ",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/StephanieCherubin/BabySAT.git"
+    "url": ""
   },
   "author": "Stephanie Cherubin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/StephanieCherubin/BabySAT/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/StephanieCherubin/BabySAT#readme",
+  "homepage": "",
   "dependencies": {
     "body-parser": "^1.18.3",
     "chai-http": "^4.2.0",

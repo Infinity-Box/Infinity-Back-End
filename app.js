@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/babySAT', { useNewUrlParser:true});
 
 const Review = require('./models/review')
-const Babysatter = require("./models/babysatter")
+const Module = require("./models/module")
 const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 3000;
@@ -25,46 +25,46 @@ app.set('view engine', 'handlebars');
 
 //INDEX
 app.get('/', (req, res) => {
-  Babysatter.find()
-    .then(babysatters => {
-      res.render('babysatters-home', {babysatters: babysatters});
+  Module.find()
+    .then(modules => {
+      res.render('modules-home', {modules: modules});
     })
     .catch(err => {
       console.log(err);
     });
 });
 
-app.get('/babysatters', (req, res) => {
-  Babysatter.find()
-    .then(babysatters => {
-        console.log(babysatters)
-      res.render('babysatters-index', {babysatters: babysatters});
+app.get('/modules', (req, res) => {
+  Module.find()
+    .then(modules => {
+        console.log(modules)
+      res.render('modules-index', {modules: modules});
     })
     .catch(err => {
       console.log(err);
     });
 });
 // NEW
-  app.get('/babysatters/new', (req, res) => {
-    res.render('babysatters-new', {});
+  app.get('/modules/new', (req, res) => {
+    res.render('modules-new', {});
   })
 
   // CREATE
   app.post('/', (req, res) => {
-    Babysatter.create(req.body)
-    .then((babysatter) => {
-      console.log(babysatter);
-      res.redirect(`/babysatters/${babysatter._id}`)
+    Module.create(req.body)
+    .then((module) => {
+      console.log(module);
+      res.redirect(`/modules/${module._id}`)
     }).catch((err) => {
       console.log(err.message);
     })
   })
 
   // SHOW
-  app.get('/babysatters/:id', (req, res) => {
-    Babysatter.findById(req.params.id).then((babysatter) => {
-       Review.find({ babysatterId: req.params.id }).then(reviews => {
-      res.render('babysatters-show', { babysatter: babysatter, reviews: reviews });
+  app.get('/modules/:id', (req, res) => {
+    Module.findById(req.params.id).then((module) => {
+       Review.find({ moduleId: req.params.id }).then(reviews => {
+      res.render('modules-show', { module: module, reviews: reviews });
   })
     }).catch((err) => {
       console.log(err.message);
@@ -72,17 +72,17 @@ app.get('/babysatters', (req, res) => {
   });
 
   // EDIT
-  app.get('/babysatters/:id/edit', (req, res) => {
-    Babysatter.findById(req.params.id, function(err, babysatter) {
-      res.render('babysatters-edit', {babysatter: babysatter});
+  app.get('/modules/:id/edit', (req, res) => {
+    Module.findById(req.params.id, function(err, module) {
+      res.render('modules-edit', {module: module});
     })
   });
 
 // UPDATE
-  app.put('/babysatters/:id', (req, res) => {
-    Babysatter.findByIdAndUpdate(req.params.id, req.body)
+  app.put('/modules/:id', (req, res) => {
+    Module.findByIdAndUpdate(req.params.id, req.body)
       .then(review => {
-        res.redirect(`/babysatters/${babysatter._id}`)
+        res.redirect(`/modules/${module._id}`)
       })
       .catch(err => {
         console.log(err.message)
@@ -90,9 +90,9 @@ app.get('/babysatters', (req, res) => {
   });
 
 // DELETE
-  app.delete('/babysatters/:id', function (req, res) {
-    console.log("DELETE babysatter")
-    Babysatter.findByIdAndRemove(req.params.id).then((babysatters) => {
+  app.delete('/modules/:id', function (req, res) {
+    console.log("DELETE module")
+    Module.findByIdAndRemove(req.params.id).then((modules) => {
       res.redirect('/');
     }).catch((err) => {
       console.log(err.message);

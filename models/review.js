@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const ReviewSchema = new Schema({
   title: String,
   content: String,
-  babysatterId: { type: Schema.Types.ObjectId, ref: 'Babysatter' }
+  moduleId: { type: Schema.Types.ObjectId, ref: 'Module' }
 });
 
 
