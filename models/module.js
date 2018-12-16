@@ -7,7 +7,6 @@ const ModuleSchema = new Schema({
   city: String,
   phonenumber: Number,
   hourlyrate: Number,
-  satscore: String
 });
 
 module.exports = mongoose.model('Module', ModuleSchema);

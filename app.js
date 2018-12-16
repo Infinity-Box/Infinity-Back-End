@@ -4,7 +4,7 @@ const app = express()
 
 //Mongoose Connection
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/babySAT', { useNewUrlParser:true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Infinity-Back-End', { useNewUrlParser:true});
 
 const Review = require('./models/review')
 const Module = require("./models/module")

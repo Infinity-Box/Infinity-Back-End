@@ -1,7 +1,13 @@
 body {
     background-color: rgb(204, 182, 180);
 }
+.section-heading {
+  color: white;
+}
 
+p {
+  color: white;
+}
 .navbar-item.is-mega {
   position: static;
 
