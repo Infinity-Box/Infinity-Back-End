@@ -1,12 +1,14 @@
 body {
-    background-color: rgb(204, 182, 180);
+    background-color: rgb(0, 182, 180);
 }
 .section-heading {
   color: white;
+  text-align: center;
 }
 
 p {
   color: white;
+  text-align: center;
 }
 .navbar-item.is-mega {
   position: static;
