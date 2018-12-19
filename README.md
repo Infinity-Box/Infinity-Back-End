@@ -1,8 +1,8 @@
  ## Preview
 
-[![Infinity Box Preview](...jpg)](https://....github.io/.../)
 
-**[View Live Preview](https://...github.io/.../)**
+
+**[View Live Preview](https://infinity-box.herokuapp.com/)**
 
 # Project Title
 
