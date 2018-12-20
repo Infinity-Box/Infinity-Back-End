@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background-color: rgb(58,59,62);
 }
 
 body {
@@ -104,14 +105,12 @@ section h2 {
 }
 
 #mainNav .navbar-nav > li > a.active {
-  color: #00FA9A !important;
-  background-color: white;
+  color: rgb(255,156,1) !important;
 }
 
-/* #mainNav .navbar-nav > li > a.active:hover {
-  background-color: transparent;
-  border-bottom: 2px solid #F117B4;
-} */
+#mainNav .navbar-nav > li > a.active:hover {
+  color: rgb(41,2,71) !important;
+}
 
 #mainNav .navbar-nav > li > a,
 #mainNav .navbar-nav > li > a:focus {
