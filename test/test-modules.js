@@ -4,7 +4,7 @@ const app = require('../app');
 const Module = require('../models/module.js');
 const sampleModule =     {
     "title": "Module 1",
-    "description": "A great modules of a lovely frog.",
+    "description": "A modules of different parts of the frog.",
 }
 
 chai.use(chaiHttp);
