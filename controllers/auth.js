@@ -34,7 +34,7 @@ module.exports = (app) => {
       user.comparePassword(password, (err, isMatch) => {
         if(!isMatch) {
           // Password doesn't match
-          return res.status(401).send(P message: "Wrong username or password ?");
+          return res.status(401).send( { message: "Wrong username or password ?" });
         }
 
         // create a token
