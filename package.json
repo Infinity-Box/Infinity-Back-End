@@ -1,40 +1,45 @@
 {
-  "name": "babysat",
+  "name": "Infinity-Back-End",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Infinity-Box/Infinity-Back-End.git"
   },
   "author": "Stephanie Cherubin",
   "license": "ISC",
   "bugs": {
     "url": ""
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Infinity-Box/Infinity-Back-End.git"
-},
   "homepage": "",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.3",
     "bootstrap": "4.1.3",
-    "chai-http": "^4.2.0",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
+    "git": "^0.1.5",
+    "handlebars": "^4.0.11",
     "jquery": "3.3.1",
     "jquery.easing": "^1.4.1",
+    "jsonwebtoken": "^8.4.0",
     "method-override": "^3.0.0",
     "mongoose": "^5.3.2",
-    "simple-line-icons": "2.4.1"
+    "nodemon": "^1.18.9",
+    "simple-line-icons": "2.4.1",
+    "test": "^0.6.0"
   },
   "devDependencies": {
     "browser-sync": "2.24.7",
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0"
   }
 }
