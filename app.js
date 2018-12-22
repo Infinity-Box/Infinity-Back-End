@@ -27,6 +27,9 @@ var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+const Auth = require('./controllers/auth.js')(app);
+const User = require('./models/user');
+
 //INDEX
 app.get('/', (req, res) => {
   Module.find()
