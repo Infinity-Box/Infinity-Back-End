@@ -1,0 +1,33 @@
+{
+  "name": "Infinity-Back-End",
+  "version": "1.0.0",
+  "description": "## Installing * Clone project and run the command `npm i`. ## Developing * You can run the command `npm run dev` to start a babel-node server using nodemon. Browser access is at `http://localhost:3000/`. ## Building * Compile with babel using the command `npm run build`. The compiled files will be in the `/server` directory. ## Testing * You can run automated tests using Mocha and Chai with `npm test`. ## Running * The compiled project can be run with the command `npm start`.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "jsonwebtoken": "^8.4.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Infinity-Box/Infinity-Back-End.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Infinity-Box/Infinity-Back-End/issues"
+  },
+  "homepage": "https://github.com/Infinity-Box/Infinity-Back-End#readme"
+}
