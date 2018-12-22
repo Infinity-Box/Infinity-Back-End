@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config();
 const methodOverride = require('method-override')
 const app = express()
 
@@ -8,13 +9,16 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Infinity-Back-E
 
 const Review = require('./models/review')
 const Module = require("./models/module")
+const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const jwt = require('jsonwebtoken');
 
 const port = process.env.PORT || 3000;
 app.listen(port);
 
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'))
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var exphbs = require('express-handlebars');
