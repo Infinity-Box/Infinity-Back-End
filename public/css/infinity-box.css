@@ -13,6 +13,9 @@ a {
   color: #00FA9A;
   -webkit-transition: all .35s;
   transition: all .35s;
+  display: inline-block;
+  padding: 3px 10px 3px 10px;
+  margin: 20px 2px 10px 2px;
 }
 
 a:hover, a:focus {
