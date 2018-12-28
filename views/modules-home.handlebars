@@ -1,105 +1,98 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head>
-    <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
-  <link rel="stylesheet" href="css/styles.css"/>
-  <style media="screen">
+  <head>
 
-      #container {
-        margin: 10px 0 0 0;
-        text-align: center;
-        }
-      #topbar {
-        margin: 25px 40px 0 0;
-        }
-      ul {
-          list-style-type: none;
-          }
-      li {
-          float: right;
-          display: block;
-          padding: 0 0 0 18px;
-          }
-      #topbar ul li {
-          font: 12.5px Arial, sans-serif;
-          }
-      #topbar ul li:first-child {
-          margin-top: -10px;
-          }
-      a {
-          text-decoration: none;
-          }
-      a:link, a:visited {
-          color: black;
-          }
-      #bottom a:link, #bottom a:visited {
-          color: #666;
-          }
-      .button {
-          background-color: rgb(0, 182, 180);
-          font: bold 13.5px/30px Arial, sans-serif!important;
-          color: #000;
-          border: 1px solid #000;
-          padding: 3px 10px 3px 10px;
-          margin: 20px 2px 10px 2px;
-          display: inline-block;
-          border-radius: 2px;
-          }
-      .button:hover {
-          border: 1px solid #cccccc;
-          color: #fff;
-          background-color: grey;
-          }
-      #bottombar {
-          background-color: #f2f2f2;
-          border-top: 2px solid #e4e4e4;
-          height: 40px;
-          clear: both;
-          position: relative;
-          margin-top: 215px;
-          font: 12.5px/40px Arial;
-          }
-      #bottombar ul {
-          margin-left: 27px margin-top: 5px;
-          }
-      #bottomleft {
-          float: left;
-          }
-      #bottomright {
-          margin-right: 27px;
-          }
-      .baby{
-          margin-top: 10%;
-          margin-left: 35%;
-      }
-      .sat{
-          margin-left: 52%;
-      }
-      .findbecome{
-          margin-left: 40%;
-      }
-      h3{
-          color: black;
-          font-weight: bold;
-          margin-left: 54%;
-      }
-  </style>
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<body>
-    <div class="baby">
-        <img src="./img/Infinity-box-3.png" alt="baby">
-    </div>
-    <h2 class="section-heading">Discover what all the buzz is about!</h2>
-    <p>Infinity Box is available on any mobile device! <br>Download now to get started!</p>
-    <div class="findbecome">
-        <div class="button">
-          <a href="/modules/">Explore A Module</a>
+    <title>Infinity Box</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+<!-- favicon stuff   -->
+<!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"> -->
+ <!-- Plugin CSS -->
+
+    <link rel="stylesheet" href="./css/infinity-box.css">
+
+  </head>
+
+  <body id="page-top">
+
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="tagline">Infinity Box</h1>
+                <h3 class='tagline'>Learning done <br> in a brand new way!</h3><br>
+              <div class="button">
+                <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Explore A Module</a>
+              </div>
+              <div class="button">
+                <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">See For Yourself!</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 my-auto">
+            <div class="device-container">
+              <div class="device-mockup ipad_pro portrait silver">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <!-- <img src="img/demo-screen-1.jpg" class="img-fluid" alt=""> -->
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="button">
-          <a href="/modules/new">Sign Up</a>
+      </div>
+    </header>
+
+    <section class="download bg-primary text-center" id="download">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading">Discover what all the buzz is about!</h2>
+            <p>Infinity Box is available on any mobile device! <br>Download now to get started!</p>
+            <div class="badges">
+              <a class="badge-link" href="#"><img src="./img/google-play-badge.svg" alt=""></a>
+              <a class="badge-link" href="#"><img src="./img/app-store-badge.svg" alt=""></a>
+            </div>
+          </div>
         </div>
-    </div>
-</body>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./css/jquery/jquery.min.js"></script>
+    <script src="./css/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="./css/jquery-easing/jquery.easing.min.js"></script>
+
+  </body>
+
 </html>
-
