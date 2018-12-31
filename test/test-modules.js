@@ -27,6 +27,7 @@ describe('Modules', ()  => {
           res.should.have.status(200);
           res.should.be.html;
           done();
+          // Call done if the test completed successfully.
         });
   });
 
