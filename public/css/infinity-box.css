@@ -1,25 +1,13 @@
 html,
 body {
   background-color: rgb(58,59,62);
-  margin: inherit;
-  width: 190%;
+  background-image: url('../img/desktop_red_notebook.png');
+  background-repeat: no-repeat;
+  background-size:contain;
 }
 
 body {
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
-  margin-left: 10px;
-  margin-right: 80px;
-}
-
-.container {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-#page-top {
-  text-align: center;
-  margin-right: 0;
 }
 
 a {
@@ -61,6 +49,7 @@ h3 {
   font-size: 50px;
   font-weight: 600;
 }
+
 .tagline {
   font-size: 30px;
   text-shadow: 1px 1px darkgray;
@@ -172,61 +161,39 @@ section h2 {
     color: #00FA9A;
   }
 }
-
-header.masthead {
-  position: relative;
+header {
   width: 100%;
-  padding-top: 150px;
-  padding-bottom: 10px;
-  margin-right: 0;
-  color: #000;
-  background-image: url('../img/desktop_red_notebook.png');
-  background-size:cover;
-  background-repeat: no-repeat;
 }
 
-header.masthead .header-content {
-  max-width: 500px;
-  margin-bottom: 100px;
-  text-align: center;
-}
-
-header.masthead .header-content h1 {
-  font-size: 30px;
-}
-
-header.masthead .device-container {
+header.device-container {
   min-width: 150px;
-  margin-right: auto;
+  margin-right: 0;
   margin-left: auto;
   margin-top: 100px;
 }
 
-header.masthead .device-container .screen img {
+header.device-container .screen img {
   border-radius: 3px;
 }
 
-@media (min-width: 992px) {
-  header.masthead {
-    height: 100vh;
-    min-height: 775px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+@media {
   header.masthead .header-content {
     margin-bottom: 0;
     text-align: left;
   }
-  header.masthead .header-content h1 {
+  header .header-content h1 {
+    margin-right: 0;
     font-size: 90px;
     color: #3CB371;
     text-shadow: 2px 2px black;
   }
-  header.masthead .device-container {
-    max-width: 325px;
+  header.device-container {
+    max-width: 200px;
   }
 }
-
+.download {
+  width: 100%;
+}
 section.download {
   position: relative;
   padding: 150px 0;
@@ -311,47 +278,10 @@ section.features .feature-item i {
   -webkit-text-fill-color: transparent;
 }
 
-section.cta {
-  position: relative;
-  padding: 250px 0;
-  background-image: url("../img/frog-butterfly-pond-mirroring.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-section.cta .cta-content {
-  position: relative;
-  z-index: 1;
-}
-
-section.cta .cta-content h2 {
-  font-size: 50px;
-  max-width: 450px;
-  margin-top: 0;
-  margin-bottom: 25px;
-  color: white;
-}
- 
-@media (min-width: 768px) {
-  section.cta .cta-content h2 {
-    font-size: 80px;
-  }
-}
-
-section.cta .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 footer {
   padding: 25px 0;
   color: white;
   background-color: rgb(58, 59, 62);
-  /* padding: 20px; */
 }
 
 .bg-primary {
