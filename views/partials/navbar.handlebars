@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <a class="navbar-brand js-scroll-trigger" href="#page-top">
+  <a class="navbar-brand js-scroll-trigger" href="/">
     <img src="./img/Infinity-box-3.png" alt="open box with colored sides" height="50">
   </a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,12 +17,24 @@
         <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="#explore">Explore</a>
       </li>
+
+
+      {{#if currentUser}}
+        <li class="nav-item">
+          <a href="/modules/new" class="btn btn-primary navbar-btn">New Post</a>
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        {{else}}
+
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="/login">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active js-scroll-trigger" href="/sign-up">Sign Up</a>
       </li>
+
+      {{/if}}
+
     </ul>
   </div>
 </nav>
