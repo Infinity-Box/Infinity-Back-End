@@ -106,4 +106,7 @@ app.get('/modules', (req, res) => {
       });
   });
 
-module.exports = app
+module.exports = app;
+module.exports.stop = () => {
+    return db.close()
+}
