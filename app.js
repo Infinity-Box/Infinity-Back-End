@@ -27,84 +27,9 @@ var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-const Auth = require('./controllers/auth.js')(app);
-const User = require('./models/user');
-
-//INDEX
-app.get('/', (req, res) => {
-  Module.find()
-    .then(modules => {
-      res.render('modules-home', {modules: modules});
-    })
-    .catch(err => {
-      console.log(err);
-    });
-});
-
-app.get('/modules', (req, res) => {
-  Module.find()
-    .then(modules => {
-        console.log(modules)
-      res.render('modules-index', {modules: modules});
-    })
-    .catch(err => {
-      console.log(err);
-    });
-});
-// NEW
-  app.get('/modules/new', (req, res) => {
-    res.render('modules-new', {});
-  })
-
-  // CREATE
-  app.post('/', (req, res) => {
-    Module.create(req.body)
-    .then((module) => {
-      console.log(module);
-      res.redirect(`/modules/${module._id}`)
-    }).catch((err) => {
-      console.log(err.message);
-    })
-  })
-
-  // SHOW
-  app.get('/modules/:id', (req, res) => {
-    Module.findById(req.params.id).then((module) => {
-       Review.find({ moduleId: req.params.id }).then(reviews => {
-      res.render('modules-show', { module: module, reviews: reviews });
-  })
-    }).catch((err) => {
-      console.log(err.message);
-  });
-  });
-
-  // EDIT
-  app.get('/modules/:id/edit', (req, res) => {
-    Module.findById(req.params.id, function(err, module) {
-      res.render('modules-edit', {module: module});
-    })
-  });
-
-// UPDATE
-  app.put('/modules/:id', (req, res) => {
-    Module.findByIdAndUpdate(req.params.id, req.body)
-      .then(review => {
-        res.redirect(`/modules/${module._id}`)
-      })
-      .catch(err => {
-        console.log(err.message)
-    });
-  });
-
-// DELETE
-  app.delete('/modules/:id', function (req, res) {
-    console.log("DELETE module")
-    Module.findByIdAndRemove(req.params.id).then((modules) => {
-      res.redirect('/');
-    }).catch((err) => {
-      console.log(err.message);
-      });
-  });
+require('./controllers/auth.js')(app);
+require('./controllers/modules')(app);
+require('/controllers/reviews')(app);
 
 module.exports = app;
 module.exports.stop = () => {
