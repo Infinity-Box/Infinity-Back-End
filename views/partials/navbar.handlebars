@@ -18,22 +18,24 @@
         <a class="nav-link js-scroll-trigger" href="#explore">Explore</a>
       </li>
 
-      {{#if currentUser}}
+      <div class="pull-right">
+
+        {{#if currentUser}}
+          <li class="nav-item">
+            <a href="/modules/new" class="btn btn-primary navbar-btn">New Post</a>
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+          {{else}}
+
         <li class="nav-item">
-          <a href="/modules/new" class="btn btn-primary navbar-btn">New Post</a>
-          <a class="nav-link" href="/logout">Logout</a>
+          <a class="nav-link active js-scroll-trigger" href="/login">Login</a>
         </li>
-        {{else}}
+        <li class="nav-item">
+          <a class="nav-link active js-scroll-trigger" href="/sign-up">Sign Up</a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link active js-scroll-trigger" href="/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active js-scroll-trigger" href="/sign-up">Sign Up</a>
-      </li>
-
-      {{/if}}
-
+        {{/if}}
+      </div>
     </ul>
   </div>
 </nav>

@@ -1,22 +1,24 @@
-<h1 class="form-title">Sign up</h1>
-
-<form class="form" method="post" action="/sign-up">
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <form class="form" method="post" action="/sign-up">
+    <legend>Sign Up</legend>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" name="username" class="form-control" id="username" placeholder="Username">
+    </div>
 
   <div class="form-group">
-    <label for="username">Username</label>
-    <input type="text" name="username" class="form-control" id="username" placeholder="Username">
+    <label for="password">Password</label>
+    <input name="password" type="password" class="form-control" id="password" placeholder="password">
   </div>
 
-<div class="form-group">
-  <label for="passwprd">Password</label>
-  <input name="password" type="password" class="form-control" id="password" placeholder="password">
-</div>
+  <div class='text-right'>
+    <button type="submit" class="btn btn-primary">Sign Up!</button>
+  </div>
 
-<div class='text-right'>
-  <button type="submit" class="btn btn-primary">Sign Up!</button>
+    <small>Have an account?
+      <a href="/login">Click here!</a>
+    </small>
+    </form>
+  </div>
 </div>
-
-  <small>Have an account?
-    <a href="/login">Click here!</a>
-  </small>
-</form>
