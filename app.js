@@ -16,7 +16,7 @@ const jwt = require('jsonwebtoken');
 const port = process.env.PORT || 3000;
 app.listen(port);
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/'));
 app.use(methodOverride('_method'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
